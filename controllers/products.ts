@@ -39,7 +39,7 @@ export const getProducts = ({ response }: { response: any }) => {
 export const getProduct = (ctx: RouterContext) => {
   const { params, response } = ctx;
   const product: Product | undefined = products.find((prod) =>
-    prod.id = params.id
+    prod.id === params.id
   );
 
   if (product) {
@@ -78,7 +78,7 @@ export const addProduct = async (ctx: RouterContext) => {
 export const updateProduct = async (ctx: RouterContext) => {
   const { request, response, params } = ctx;
   const product: Product | undefined = products.find((prod) =>
-    prod.id = params.id
+    prod.id === params.id
   );
 
   if (product) {
@@ -104,7 +104,7 @@ export const updateProduct = async (ctx: RouterContext) => {
 export const deleteProduct = (ctx: RouterContext) => {
   const { params, response } = ctx;
   const product: Product | undefined = products.find((prod) =>
-    prod.id = params.id
+    prod.id === params.id
   );
   if (product) {
     products = products.filter((prod) => prod.id !== params.id);
