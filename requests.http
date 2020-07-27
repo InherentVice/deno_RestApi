@@ -1,0 +1,29 @@
+### Get all products
+GET http://localhost:5000/api/v1/products
+
+### Get single products
+GET http://localhost:5000/api/v1/products/1
+
+### Add product
+POST http://localhost:5000/api/v1/products
+Content-Type: application/json
+
+{
+  "name":  "New Product",
+  "description": "this is the new Product",
+  "price": 39.99
+}
+
+### Update product
+PUT http://localhost:5000/api/v1/products/1
+Content-Type: application/json
+
+{
+  "name":  "Updated First Product",
+  "description": "this is the updated first Product",
+  "price": 1.99
+}
+
+### Delete product
+DELETE http://localhost:5000/api/v1/products/1
+
